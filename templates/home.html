@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero-section" style="background-image: url('{{ url_for('static', filename='images/hero-bg.jpg') }}');">
+    <div class="overlay">
+        <div class="hero-content text-center">
+            <h1 class="display-3">Welcome to My Personal Website</h1>
+            <p class="lead">I'm Sid, a computer science engineer specializing in machine learning, AI, and full-stack development.</p>
+            <a href="/projects" class="btn btn-lg btn-primary mt-3">View My Projects</a>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="text-center">My Skills</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h3>Machine Learning</h3>
+            <p>Proficient in building models using Python, TensorFlow, and scikit-learn.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Web Development</h3>
+            <p>Experienced in full-stack development using Flask, React, and Node.js.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Cloud Computing</h3>
+            <p>Skilled in AWS, Azure, and cloud architecture.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

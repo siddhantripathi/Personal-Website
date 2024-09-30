@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1>My Projects</h1>
+    <p>Here are some of my projects hosted on GitHub. Click on a project to see more details.</p>
+    
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 mb-3">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#projectModal{{ loop.index }}">
+                {{ project.name }}
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="projectModal{{ loop.index }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ project.name }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>{{ project.description }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ project.url }}" class="btn btn-primary" target="_blank">View Project on GitHub</a>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
