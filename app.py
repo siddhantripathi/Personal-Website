@@ -5,11 +5,11 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Replace this with a strong secret key
 
 # Flask-Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # You can use other providers like Outlook, etc.
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'siddhant8792@gmail.com'
-app.config['MAIL_PASSWORD'] = 'pzqd qplb mjuw zqxf'  # Replace this with the generated app password
+app.config['MAIL_PASSWORD'] = 'pzqd qplb mjuw zqxf'  # Replace with your app-specific password
 
 mail = Mail(app)
 
@@ -50,13 +50,17 @@ def contact():
 
         # Compose email
         msg = Message('Personal Website Contact Form',
-                      sender=email,
-                      recipients=['siddhant8792@gmail.com'])  # Replace with your actual email
+                      sender=app.config['MAIL_USERNAME'],
+                      recipients=['siddhant8792@gmail.com'])
         msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
-        mail.send(msg)
+        
+        try:
+            mail.send(msg)
+            flash('Your message has been sent! I will get back to you soon.')
+        except Exception as e:
+            flash(f'An error occurred while sending your message: {str(e)}', 'error')
 
-        flash('Your message has been sent! I will get back to you soon.')
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
