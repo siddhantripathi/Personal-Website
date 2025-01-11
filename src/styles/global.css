@@ -1,0 +1,84 @@
+:root {
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  transition: background-color 1s;
+}
+
+body.light-mode {
+  color: var(--text-color);
+}
+
+/* Ensure all text stays white */
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+  color: var(--text-color);
+}
+
+/* Text colors for components */
+.experience-card, .project-card {
+  color: var(--text-dark);
+}
+
+body.light-mode .experience-card,
+body.light-mode .project-card {
+  color: var(--text-light);
+}
+
+/* Secondary text colors */
+.experience-date, .project-description {
+  color: var(--text-gray-dark);
+}
+
+body.light-mode .experience-date,
+body.light-mode .project-description {
+  color: var(--text-gray-light);
+}
+
+a {
+  text-decoration: none;
+  color: #bb86fc;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Ensure main content has a dark background with some transparency */
+main {
+  position: relative;
+  z-index: 1; /* Ensure it stays above the stars */
+  background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent dark background */
+  padding: 2rem; /* Add some padding */
+}
+
+/* Theme transition styles */
+.stars.light {
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+  transition: background 1s;
+}
+
+.stars.dark {
+  background: none;
+  transition: background 1s;
+}
+
+/* Ensure all text transitions smoothly */
+* {
+  transition: color 0.3s ease;
+}
+
+/* Remove any default backgrounds */
+section {
+  background: none !important;
+}
+
+/* Ensure content doesn't create unwanted backgrounds */
+.content-wrapper {
+  background: none;
+  position: relative;
+  z-index: 1;
+} 

@@ -1,0 +1,66 @@
+.skills {
+  padding: 2rem;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.skill-percentage {
+  color: #bb86fc;
+}
+
+.skill-bar-container {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #bb86fc 0%, #7c4dff 100%);
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  width: 0;
+}
+
+/* Remove the animation that might override the width */
+.skill-bar.animate {
+  transition: width 1s ease-in-out;
+}
+
+/* Add hover effect */
+.skill-item:hover .skill-bar {
+  background: linear-gradient(90deg, #7c4dff 0%, #bb86fc 100%);
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 0 1rem;
+  }
+  
+  .skill-item {
+    margin-bottom: 1rem;
+  }
+} 

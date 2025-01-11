@@ -1,0 +1,84 @@
+.contact {
+  padding: var(--spacing-xl) 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #bb86fc;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
+}
+
+.form-label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #bb86fc;
+}
+
+textarea.form-input {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #bb86fc 0%, #7c4dff 100%);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+}
+
+/* Add ripple effect */
+.form-input:focus {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(187, 134, 252, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(187, 134, 252, 0);
+  }
+} 

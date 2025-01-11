@@ -1,0 +1,64 @@
+/* Container for the stars */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+  background-attachment: fixed;
+}
+
+.stars.light {
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+  background-attachment: fixed;
+}
+
+.stars.dark {
+  background: linear-gradient(to bottom, #0a192f, #000000);
+  background-attachment: fixed;
+}
+
+/* Individual star styling */
+.star {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 10px #ffffff,
+    0 0 20px #ffffff,
+    0 0 30px #ffffff;
+  animation: twinkle 1.5s infinite alternate;
+  z-index: -1;
+}
+
+/* Ensure moon is visible */
+.moon {
+  z-index: -1;
+}
+
+/* Twinkle animation */
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+    box-shadow: 
+      0 0 10px #ffffff,
+      0 0 20px #ffffff,
+      0 0 30px #ffffff;
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 
+      0 0 5px #ffffff,
+      0 0 10px #ffffff,
+      0 0 15px #ffffff;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 
+      0 0 10px #ffffff,
+      0 0 20px #ffffff,
+      0 0 30px #ffffff;
+  }
+}
