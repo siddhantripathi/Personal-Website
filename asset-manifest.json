@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Personal-Website/static/css/main.6df276e9.css",
+    "main.js": "/Personal-Website/static/js/main.4c6c3884.js",
+    "static/media/self.jpg": "/Personal-Website/static/media/self.2a9d212fb40a8b891c81.jpg",
+    "static/media/delhi_uni.jpg": "/Personal-Website/static/media/delhi_uni.1bad55ae1814b0bf4d48.jpg",
+    "static/media/vigyanshaala.jpg": "/Personal-Website/static/media/vigyanshaala.04c8ee53b0009a4058c6.jpg",
+    "static/media/DRDO.jpg": "/Personal-Website/static/media/DRDO.0ef328d066ebaea153d9.jpg",
+    "static/media/thales.jpg": "/Personal-Website/static/media/thales.480fd569f788bb952cda.jpg",
+    "static/media/lifestages.jpg": "/Personal-Website/static/media/lifestages.b1c68201f2c316172b13.jpg",
+    "index.html": "/Personal-Website/index.html",
+    "main.6df276e9.css.map": "/Personal-Website/static/css/main.6df276e9.css.map",
+    "main.4c6c3884.js.map": "/Personal-Website/static/js/main.4c6c3884.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6df276e9.css",
+    "static/js/main.4c6c3884.js"
+  ]
+}
