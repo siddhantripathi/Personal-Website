@@ -1,5 +1,7 @@
 :root {
   --text-color: #ffffff;
+  --mobile-padding: 1rem;
+  --tablet-padding: 2rem;
 }
 
 body {
@@ -81,4 +83,38 @@ section {
   background: none;
   position: relative;
   z-index: 1;
+}
+
+/* Global mobile adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Prevent pull-to-refresh on mobile */
+  body {
+    overscroll-behavior-y: contain;
+  }
 } 

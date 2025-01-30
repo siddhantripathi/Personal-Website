@@ -4,7 +4,7 @@ import profilePhoto from '../../images/self.jpg';
 
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-container">
         <div className="about-content">
           <h2>About Me</h2>

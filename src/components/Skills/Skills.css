@@ -63,4 +63,27 @@
   .skill-item {
     margin-bottom: 1rem;
   }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .skill-card {
+    padding: 1rem;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
 } 

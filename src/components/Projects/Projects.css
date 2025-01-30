@@ -13,13 +13,12 @@
 }
 
 .project-card {
+  position: relative;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -29,9 +28,7 @@ body.light-mode .project-card {
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: none;
 }
 
 .project-image img {
@@ -41,16 +38,17 @@ body.light-mode .project-card {
 }
 
 .project-content {
+  padding: 1.5rem;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.project-card:hover .project-content {
+/* Show content when expanded */
+.project-card.expanded .project-content {
   opacity: 1;
-  max-height: 500px; /* Adjust based on your content */
-  margin-top: 1rem;
+  max-height: 1000px; /* Adjust this value based on your content */
 }
 
 .project-title {
@@ -77,4 +75,57 @@ body.light-mode .project-card {
   border-radius: 20px;
   font-size: 0.8rem;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+    height: auto;
+  }
+
+  .project-content {
+    /* Show content by default on mobile */
+    opacity: 1;
+    max-height: none;
+    margin-top: 1rem;
+  }
+
+  .project-image img {
+    height: 180px;
+  }
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  padding: 0.5rem 1rem;
+  background: rgba(187, 134, 252, 0.1);
+  border: 1px solid rgba(187, 134, 252, 0.5);
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(187, 134, 252, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-link.github {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-link.github:hover {
+  background: rgba(255, 255, 255, 0.2);
 } 

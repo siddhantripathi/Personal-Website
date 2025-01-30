@@ -77,4 +77,51 @@
 .experience-card.expanded {
   width: 100%;
   margin: 0 auto;
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 1rem;
+  }
+
+  .timeline {
+    margin-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .timeline-item {
+    margin-left: -1rem;
+  }
+
+  .timeline-content {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-date {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-description {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 } 

@@ -12,6 +12,7 @@ import Stars from './components/Stars/Stars';
 import './styles/global.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Certificates from './components/Certificates/Certificates';
 
 // Initialize AOS
 AOS.init({
@@ -33,6 +34,7 @@ function App() {
             <Route path="/project/:id" element={<ProjectPage />} />
           </Routes>
           <Experience />
+          <Certificates />
           <Contact />
         </main>
       </div>

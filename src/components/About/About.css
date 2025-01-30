@@ -75,15 +75,28 @@
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column-reverse;
-    align-items: center;
-    gap: 2rem;
+    padding: 1rem;
   }
 
   .profile-photo-container {
-    max-width: 250px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 2rem;
+  }
+
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .about-content {
     text-align: center;
+  }
+
+  .about-content p {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 } 

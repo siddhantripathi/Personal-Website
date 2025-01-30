@@ -65,4 +65,147 @@ nav li::after {
 
 nav li:hover::after {
   width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.mobile-menu-button span {
+  display: block;
+  color: white;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+  }
+
+  .logo {
+    margin-left: 1rem;
+  }
+
+  .mobile-menu-button {
+    display: block;
+    left: 4rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+    position: absolute;
+    left: 24rem;
+    right: 0rem;
+    top: 2rem;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
 } 

@@ -7,6 +7,7 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 const Stars = () => {
   const [isDark, setIsDark] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [numStars, setNumStars] = useState(100);
 
   const toggleTheme = () => {
     if (isAnimating) return;
@@ -49,6 +50,17 @@ const Stars = () => {
       setIsAnimating(false);
     }, 1000);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Reduce stars on mobile for better performance
+      setNumStars(window.innerWidth < 768 ? 50 : 100);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const starsContainer = document.querySelector('.stars');

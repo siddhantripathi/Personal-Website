@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, y: 20 }}

@@ -13,17 +13,21 @@ const Skills = () => {
   }, []);
 
   const skills = [
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 85 },
+    { name: 'Python', level: 90 },
     { name: 'Node.js', level: 80 },
-    { name: 'Python', level: 75 },
-    { name: 'CSS', level: 85 },
-    { name: 'HTML', level: 95 },
+    { name: 'React', level: 80 },
+    
+    { name: 'Java', level: 80 },
+    { name: 'Web Development', level: 80 },
+    { name: 'Cloud Technologies', level: 75 },
+    { name: 'Machine Learning', level: 70 }
+    
+    
     // Add more skills as needed
   ];
 
   return (
-    <section className="skills">
+    <section id="skills" className="skills">
       <h2>Skills</h2>
       <div className="skills-container">
         {skills.map((skill, index) => (
