@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/Personal-Website/static/css/main.055fa1b4.css",
-    "main.js": "/Personal-Website/static/js/main.aadf3796.js",
+    "main.js": "/Personal-Website/static/js/main.0623cfb1.js",
     "static/media/self.jpg": "/Personal-Website/static/media/self.2a9d212fb40a8b891c81.jpg",
     "static/media/delhi_uni.jpg": "/Personal-Website/static/media/delhi_uni.1bad55ae1814b0bf4d48.jpg",
     "static/media/2.jpg": "/Personal-Website/static/media/2.043daebeb1c745a70542.jpg",
     "static/media/vigyanshaala.jpg": "/Personal-Website/static/media/vigyanshaala.04c8ee53b0009a4058c6.jpg",
+    "static/media/3.jpeg": "/Personal-Website/static/media/3.cf59112f470406ade4d3.jpeg",
     "static/media/DRDO.jpg": "/Personal-Website/static/media/DRDO.0ef328d066ebaea153d9.jpg",
     "static/media/thales.jpg": "/Personal-Website/static/media/thales.480fd569f788bb952cda.jpg",
     "static/media/lifestages.jpg": "/Personal-Website/static/media/lifestages.b1c68201f2c316172b13.jpg",
     "index.html": "/Personal-Website/index.html",
     "main.055fa1b4.css.map": "/Personal-Website/static/css/main.055fa1b4.css.map",
-    "main.aadf3796.js.map": "/Personal-Website/static/js/main.aadf3796.js.map"
+    "main.0623cfb1.js.map": "/Personal-Website/static/js/main.0623cfb1.js.map"
   },
   "entrypoints": [
     "static/css/main.055fa1b4.css",
-    "static/js/main.aadf3796.js"
+    "static/js/main.0623cfb1.js"
   ]
 }
