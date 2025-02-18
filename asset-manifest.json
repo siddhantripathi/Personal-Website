@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.7991b138.css",
+    "main.css": "/Personal-Website/static/css/main.ff3b7749.css",
     "main.js": "/Personal-Website/static/js/main.05772387.js",
     "static/media/self.jpg": "/Personal-Website/static/media/self.2a9d212fb40a8b891c81.jpg",
     "static/media/delhi_uni.jpg": "/Personal-Website/static/media/delhi_uni.1bad55ae1814b0bf4d48.jpg",
@@ -11,11 +11,11 @@
     "static/media/thales.jpg": "/Personal-Website/static/media/thales.480fd569f788bb952cda.jpg",
     "static/media/lifestages.jpg": "/Personal-Website/static/media/lifestages.b1c68201f2c316172b13.jpg",
     "index.html": "/Personal-Website/index.html",
-    "main.7991b138.css.map": "/Personal-Website/static/css/main.7991b138.css.map",
+    "main.ff3b7749.css.map": "/Personal-Website/static/css/main.ff3b7749.css.map",
     "main.05772387.js.map": "/Personal-Website/static/js/main.05772387.js.map"
   },
   "entrypoints": [
-    "static/css/main.7991b138.css",
+    "static/css/main.ff3b7749.css",
     "static/js/main.05772387.js"
   ]
 }
