@@ -8,18 +8,15 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .project-card {
-  position: relative;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  height: fit-content;
 }
 
 body.light-mode .project-card {
@@ -27,38 +24,49 @@ body.light-mode .project-card {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.project-card:hover {
-  transform: none;
+.project-card .project-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
-.project-image img {
+.project-card .project-image {
   width: 100%;
   height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card .project-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-card.expanded {
+  grid-row: span 2;
 }
 
 .project-content {
-  padding: 1.5rem;
+  margin-top: 1rem;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-/* Show content when expanded */
 .project-card.expanded .project-content {
   opacity: 1;
-  max-height: 1000px; /* Adjust this value based on your content */
-}
-
-.project-title {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  max-height: 1000px;
 }
 
 .project-description {
-  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
   line-height: 1.6;
 }
 
@@ -66,15 +74,14 @@ body.light-mode .project-card {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .tag {
-  background: rgba(187, 134, 252, 0.3);
-  padding: 0.3rem 0.8rem;
+  background: rgba(65, 45, 139, 0.705);
+  padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.8rem;
-  color: #ffffff;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -103,26 +110,26 @@ body.light-mode .project-card {
 .project-links {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .project-link {
   padding: 0.5rem 1rem;
-  background: rgba(187, 134, 252, 0.1);
-  border: 1px solid rgba(187, 134, 252, 0.5);
-  border-radius: 4px;
-  color: #ffffff;
+  border-radius: 6px;
+  background: rgba(177, 23, 156, 0.1);
+  
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
-  transition: all 0.3s ease;
+  color: white;
+  transition: background 0.3s ease;
 }
 
 .project-link:hover {
-  background: rgba(187, 134, 252, 0.2);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-link.github {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(177, 23, 156, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 

@@ -19,6 +19,7 @@ AOS.init({
   duration: 10,
   once: true
 });
+
 function App() {
   return (
     <Router>

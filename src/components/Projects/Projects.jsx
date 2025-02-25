@@ -4,11 +4,13 @@ import ProjectCard from './ProjectCard';
 import './Projects.css';
 import project1Image from './1.jpg.png';
 import project2Image from './2.jpg';
+import project3Image from './3.jpeg';
 
 const Projects = () => {
   const [expandedId, setExpandedId] = useState(null);
 
   const handleExpand = (id) => {
+    console.log('Expanding:', id, 'Current:', expandedId);
     setExpandedId(expandedId === id ? null : id);
   };
 
@@ -32,10 +34,23 @@ const Projects = () => {
       "The chatbot is built using Claude 3.5 Sonnet and is fine tuned to answer questions specific to the pet adoption website and process and is designed to be a helpful assisntant to users."+
       "The web application is currently in staging and is soon to be deployed, hosted on AWS.",
       image: project2Image,
-      tags: ["JavaScript", "Web development", "MongoDB", "AWS" ,"Chatbot"],
+      tags: ["JavaScript", "Web development", "MongoDB", "AWS" ,"Chatbot", "LLM"],
       projectUrl: "https://github.com/jinishshah00/PAPapp/tree/development",
       github: "https://github.com/jinishshah00/PAPapp/tree/development"
     },
+    {
+      id: '3',
+      title: "Texting helper",
+      description: "A chatbot designed to help with texting especially regarding dating apps."+
+      "The chatbot is built using a fine tuned Deepseek model and hosted on vercel."+
+      "The chatbot is able to answer questions, provide information and help with texting strategies.The chatbot is able to handle complex queries and provide helpful responses. The chatbot is able to handle small talk and keep the conversation engaging."+
+      "The chatbot is able to handle different languages and dialects."+
+      "The chatbot is able to handle different cultures and customs.",
+      image: project3Image,
+      tags: ["JavaScript", "Web development", "Python", "Firebase" ,"Chatbot", "LLM"],
+      projectUrl: "https://datebot-project.vercel.app/",
+      github: "https://github.com/siddhantripathi/Datebot_project"
+    }
     // Add more projects here
   ];
 

@@ -9,18 +9,19 @@ const About = () => {
         <div className="about-content">
           <h2>About Me</h2>
           <p>
-          Hi, I’m Siddhant Tripathi, a passionate and detail-oriented software engineer with a strong foundation in full-stack development, cloud technologies, data analytics, and machine learning. I thrive at the intersection of technology and innovation, bringing fresh perspectives and a commitment to excellence to every project I undertake.
-
-With a Master’s degree in Computer Science from Santa Clara University (expected December 2024) and a Bachelor’s in Computer Science from PES University, I have honed my expertise in machine learning, natural language processing, and cloud-based solutions. My global experiences across academia, research, and industry have shaped me into an adaptable and collaborative professional eager to tackle complex challenges.
-
-Throughout my career, I’ve contributed to impactful projects, including developing a recommendation model for a wellness app, designing autonomous navigation systems, and leading Python and data analytics workshops to empower future engineers. I’m particularly passionate about driving innovation in cloud-based, data-driven services while fostering inclusive and collaborative environments.
-
-</p>
-          <p>
-          In addition to my technical expertise, I hold certifications such as the AWS Certified Cloud Practitioner and Microsoft Certified: Azure Fundamentals, showcasing my proficiency in cloud infrastructure and services.
-
-When I’m not coding or analyzing data, I love playing football, hitting the gym, and diving into video games. My gamer tag is usually trippy_boi—so if you want to team up and play your favorite game together, let’s connect!
+          Hi, I’m Siddhant Tripathi—a passionate and detail-oriented software engineer with a robust background in full-stack development, mobile app innovation, cloud technologies, data analytics, and machine learning. Currently, I’m leveraging my expertise as a Software Engineer at Life Stages in the San Francisco Bay Area, where I lead the development of both iOS and Android mobile applications dedicated to enhancing mental well-being. 
           
+          My work spans the entire development lifecycle—from ideation and cross-platform implementation (using frameworks like React Native and Flutter) to seamless deployment—ensuring that every feature directly contributes to a better user experience.
+
+          I earned my Master’s degree in Computer Science from Santa Clara University, December 2024, and hold a Bachelor’s in Computer Science from PES University, June 2022. 
+          
+          Over the years, I’ve built a diverse portfolio: from creating AI-driven recommendation systems for wellness apps and contributing to autonomous navigation projects at DRDO, to driving predictive analytics during my data analyst internship at Guavus and empowering future engineers as a guest lecturer at Daulat Ram College. 
+          
+          These experiences have shaped me into an adaptable, collaborative professional who thrives on tackling complex challenges with innovative, data-driven solutions.
+
+          In addition to my technical skills, I’m certified as an AWS Cloud Practitioner and Microsoft Azure Fundamentals professional, underscoring my proficiency in cloud infrastructure. 
+
+          When I’m not coding or architecting scalable systems, you can find me on the football field, in the gym, or immersed in video games under the gamer tag trippy_boi. Let’s connect and explore how we can push the boundaries of technology together!
           </p>
         </div>
         <div className="profile-photo-container">

@@ -8,16 +8,31 @@ import thales from '../../images/thales.jpg';
 
 const Experience = () => {
   const experiences = [
+      {
+        title: "Software Engineer",
+        company: "LifeStages",
+        location: "San Francisco, CA",
+        date: "March 2024 - Present",
+        description: [
+          "Leading the development of the Android app from ground up, implementing cross-platform architecture and evaluating frameworks like React Native and Flutter.",
+          "Enhancing the iOS app through feature development and deployment using CI/CD pipelines, directly impacting users' mental health and wellness journeys.",
+          "Collaborating with cross-functional teams (product, design, engineering) to ensure seamless integration and cohesive user experience across platforms.",
+          "Contributing to the full development lifecycle from ideation to deployment, with creative freedom to implement innovative features."
+        ],
+        image: lifestages,
+        isPromotion: true
+      },
     {
-      title: "Life Stages",
-      company: "Tech Corp",
+      title: "Software Engineer intern",
+      company: "LifeStages",
       location: "San Francisco, CA",
       date: "March 2024 - June 2024",
       description:[ "Joined early in the development phase, transitioning a wellness app from initial concept to full execution. " +
                    "Developed a recommendation model using collaborative filtering with the data analysis team. " +
                    "Utilized Git for version control and adhered to SDLC principles, ensuring a smooth development process. " +
                    "Used CSS, JavaScript, and React for front-end and migrating from Firebase to AWS for scalability."],
-      image: lifestages
+      image: lifestages,
+      isPromotionPrevious: true
     },
     {
       title: "Research Intern",
@@ -27,7 +42,9 @@ const Experience = () => {
       description: ["Collaborated with a team on the Autonomous Ground Navigation System, achieving 98.5% precision localization in dynamic environments. " +
                    "Integrated and processed data from GPS, LIDAR, and camera, resulting in a robust 10km^2 terrain mapping. " +
                    "Maintained rigorous project documentation, facilitating smooth project handovers and future developments. "],
-      image: drdo
+      image: drdo,
+      isPromotionPrevious: false
+      
     },
     {
       title: "Guest Lecturer",
@@ -36,7 +53,8 @@ const Experience = () => {
       date: "October 2021 - November 2021 ",
       description:["Invited to lead a 2-week Python data analysis course for 45 students, covering machine learning libraries and receiving a 95% positive feedback rating. " +
                    "Assessed students to complete data analysis projects, improving their practical skills and knowledge. " ],
-      image: delhiUni
+      image: delhiUni,
+      isPromotionPrevious: false
     },
     {
       title: "Education Mentor",
@@ -44,7 +62,8 @@ const Experience = () => {
       location: "Delhi, India",
       date: "August 2021 - October 2021 ",
       description: ["Led a team of 3 to deliver a Python curriculum to 30 students, emphasizing data analysis and visualization. "],
-      image: vigyanshala
+      image: vigyanshala,
+      isPromotionPrevious: false
     },
     {
       title: "Data Analyst Intern",
@@ -55,7 +74,8 @@ const Experience = () => {
                    "Enhanced data hygiene by organizing 50k+ client records, ensuring high accuracy for model-building. " +
                     "Conducted over 20 code reviews, reducing code defects by 10%." +
                     "Generated over 30 bi-weekly reports, translating data into actionable insights."],
-      image: thales
+      image: thales,
+      isPromotionPrevious: false
     },
   ];
 
@@ -72,7 +92,7 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div 
             key={index} 
-            className={`experience-card ${expandedId === index ? 'expanded' : ''}`}
+            className={`experience-card ${expandedId === index ? 'expanded' : ''} ${exp.isPromotion ? 'promotion' : ''} ${exp.isPromotionPrevious ? 'promotion-previous' : ''}`}
             onClick={() => toggleExpand(index)}
           >
             <div className="experience-preview">

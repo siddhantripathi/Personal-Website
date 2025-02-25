@@ -53,7 +53,7 @@ button {
 main {
   position: relative;
   z-index: 1; /* Ensure it stays above the stars */
-  background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent dark background */
+  background-color: rgba(18, 18, 18, 0.4); /* Semi-transparent dark background */
   padding: 2rem; /* Add some padding */
 }
 
