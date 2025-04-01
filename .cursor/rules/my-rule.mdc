@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+---
+
+# Your rule content
+Mention all paths when coding
+Ensure that you do not create new files that do not need to be created. Especially main files like App.js
+For any UI changes, make sure that the paths and imports are correct and that you do not cause conflicts with other functionalities.
+For any UI changes from this point on, I want to make this website more gamified to increase user retention.
+You go in circles a lot, this is unacceptable have a limit of 2 tries before switching tactics
+- You can @ files here
+- You can use markdown but dont have to

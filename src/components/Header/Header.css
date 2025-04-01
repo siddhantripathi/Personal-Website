@@ -9,7 +9,7 @@
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 1001;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -122,7 +122,7 @@ nav li:hover::after {
     position: fixed;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
+    z-index: 1001;
   }
 
   .logo {

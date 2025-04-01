@@ -8,7 +8,7 @@ import Projects from './components/Projects/Projects';
 import ProjectPage from './components/Projects/ProjectPage';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
-import Stars from './components/Stars/Stars';
+import Canvas from './components/Canvas/Canvas';
 import './styles/global.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Stars />
+        <Canvas />
         <Header />
         <main>
           <Hero />

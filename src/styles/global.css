@@ -52,9 +52,16 @@ button {
 /* Ensure main content has a dark background with some transparency */
 main {
   position: relative;
-  z-index: 1; /* Ensure it stays above the stars */
+  z-index: 1;
+  /* This is crucial - allow pointer events to pass through */
+  pointer-events: none;
   background-color: rgba(18, 18, 18, 0.4); /* Semi-transparent dark background */
   padding: 2rem; /* Add some padding */
+}
+
+/* But enable pointer events for all content inside main */
+main * {
+  pointer-events: auto;
 }
 
 /* Theme transition styles */
@@ -117,4 +124,15 @@ html {
   body {
     overscroll-behavior-y: contain;
   }
+} 
+
+/* Add this to your global styles */
+main, 
+.content,
+header,
+nav,
+section,
+.page-content {
+  position: relative;
+  z-index: 1000;
 } 
