@@ -5,16 +5,38 @@ import './Projects.css';
 import project1Image from './1.jpg.png';
 import project2Image from './2.jpg';
 import project3Image from './3.jpeg';
+import project4Image from './align.jpg';
+import project5Image from './Lifestages.png';
 
 const Projects = () => {
   const [expandedId, setExpandedId] = useState(null);
 
   const handleExpand = (id) => {
-    console.log('Expanding:', id, 'Current:', expandedId);
     setExpandedId(expandedId === id ? null : id);
   };
 
   const projects = [
+    {
+      id: '4',
+      title: "Align",
+      description: 
+        "Align is a holistic wellness platform—live on iOS and coming soon to Android—that empowers users to track and improve their mental health. " +
+        "Built with SwiftUI, Swift, and Firebase, the iOS app features guided journaling, on-demand meditation and yoga sessions, plus a vibrant community forum. " +
+        "As Dev Lead, I coordinate a team of four to bring the Android version to life in Kotlin/Flutter. " +
+        "Align also includes an intelligent chatbot assistant powered by a multi-LLM architecture, delivering personalized tips and support to each user.",
+      image: project4Image,
+      tags: [
+        "iOS Development", 
+        "Android Development", 
+        "SwiftUI", 
+        "Swift", 
+        "Kotlin", 
+        "Flutter", 
+        "Firebase", 
+        "Python (Flask)"
+      ],
+      projectUrl: "https://apps.apple.com/us/app/align-by-life-stages/id6502299277?uo=2",
+    },
     {
       id: '1',
       title: "The Block",
@@ -50,8 +72,26 @@ const Projects = () => {
       tags: ["JavaScript", "Web development", "Python", "Firebase" ,"Chatbot", "LLM"],
       projectUrl: "https://datebot-project.vercel.app/",
       github: "https://github.com/siddhantripathi/Datebot_project"
-    }
-    // Add more projects here
+    },
+    {
+      id: '5',
+      title: "LifeStages Website",
+      description: 
+        "I built the full-stack website for LifeStages, a San Francisco–based wellness company, using React, JavaScript, HTML, and CSS. " +
+        "The site showcases their core offerings—Align app, corporate wellness programs, community events—and provides users with easy access to resources and tools. " +
+        "On the backend, I implemented a Node.js/Express API to manage event scheduling and user inquiries, with MongoDB for data storage. " +
+        "Close collaboration with the LifeStages team ensured the final product is both on-brand and highly usable.",
+      image: project5Image,
+      tags: [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Node.js",
+        "MongoDB"
+      ],
+      projectUrl: "https://lifestages.us",
+    },
   ];
 
   return (
@@ -63,7 +103,10 @@ const Projects = () => {
       >
         My Projects
       </motion.h2>
-      <div className="projects-grid">
+      <motion.div 
+        className="projects-grid"
+        layout
+      >
         {projects.map((project, index) => (
           <ProjectCard 
             key={project.id} 
@@ -73,7 +116,7 @@ const Projects = () => {
             onExpand={() => handleExpand(project.id)}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
