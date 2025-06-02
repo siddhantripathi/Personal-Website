@@ -7,6 +7,7 @@ import project2Image from './2.jpg';
 import project3Image from './3.jpeg';
 import project4Image from './align.jpg';
 import project5Image from './Lifestages.png';
+import project6Image from './preventify.jpg';
 
 const Projects = () => {
   const [expandedId, setExpandedId] = useState(null);
@@ -36,6 +37,19 @@ const Projects = () => {
         "Python (Flask)"
       ],
       projectUrl: "https://apps.apple.com/us/app/align-by-life-stages/id6502299277?uo=2",
+    },
+    {
+      id: '6',
+      title: "Preventify",
+      description: 
+       "Preventify is a comprehensive EMR (Electronic Medical Records) platform built pro bono for a healthcare startup that equips doctors with tools to speed up initial diagnoses and recommend the right specialists for each patient. " +
+    "Using React, JavaScript, and Firebase as the technical stack and multiple fine-tuned LLMs as part of a multi-LLM architecture, this web application offers a tool for doctors to speed up inital diagnoses and provides an intuitive interface for managing patient records, appointments, and medical histories. " + 
+    "The platform incorporates classification models and LLMs that help providers quickly access relevant patient information and medical guidelines. " +
+    "As the lead developer, I implemented secure authentication protocols to ensure HIPAA compliance and developed a responsive UI that works seamlessly across devices, enabling healthcare professionals to access critical information anytime, anywhere.",
+      image: project6Image,
+      tags: ["React", "JavaScript", "Firebase", "Healthcare", "EMR", "LLM fine tuning", "AI Chatbot", "ML Classification Models", "HIPAA Compliance"],
+      projectUrl: "https://preventify.vercel.app/",
+      github: "https://github.com/siddhantripathi/Preventify"
     },
     {
       id: '1',

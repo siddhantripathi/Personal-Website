@@ -86,4 +86,44 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.show-more-button {
+  background: transparent;
+  color: #bb86fc;
+  border: 1px solid #bb86fc;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.show-more-button:hover {
+  background: rgba(187, 134, 252, 0.1);
+  box-shadow: 0 0 8px rgba(187, 134, 252, 0.3);
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 0 1rem;
+  }
+  
+  .skill-item {
+    margin-bottom: 1rem;
+  }
 } 

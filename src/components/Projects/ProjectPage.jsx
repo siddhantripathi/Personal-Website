@@ -31,6 +31,11 @@ const ProjectPage = () => {
       title: 'Project 5',
       description: 'Detailed description of Project 5.',
     },
+    {
+      id: '6',
+      title: 'Project 6',
+      description: 'Detailed description of Project 6.',
+    },
     // Add more projects as needed
   ];
 
