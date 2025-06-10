@@ -32,13 +32,6 @@ const Hero = () => {
         >
           I create beautiful and functional web experiences
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
-          Try to find the constellations!
-        </motion.p>
         
       </motion.div>
     </section>

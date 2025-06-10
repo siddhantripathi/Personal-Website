@@ -133,21 +133,6 @@ class WebSystem {
       this.drawConstellation(this.hoveredConstellation, timestamp);
     }
 
-    // Draw hint text at top right
-    this.ctx.save();
-    // Since our canvas is already scaled by dpr during resize,
-    // we can calculate text coordinates based on the unscaled dimensions.
-    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-    this.ctx.font = '16px Arial';
-    this.ctx.textAlign = 'left';
-    // Using window.innerWidth for correct positioning
-    this.ctx.fillText(
-      'try to find the constellations!',
-      window.innerWidth - 20,
-      30
-    );
-    this.ctx.restore();
-
     // Update constellation opacity for fade effect
     if (this.hoveredConstellation && this.constellationOpacity < 1) {
       this.constellationOpacity = Math.min(1, this.constellationOpacity + deltaTime / 500);
@@ -255,10 +240,15 @@ const Canvas = () => {
     const updateCanvasSize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
+      
+      // Account for header height on different screen sizes
+      const headerHeight = width <= 480 ? 60 : width <= 768 ? 70 : 50;
+      const adjustedHeight = height - headerHeight;
+      
       canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      canvas.height = adjustedHeight * dpr;
       canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
+      canvas.style.height = `${adjustedHeight}px`;
       // Reset the scale each time size updates
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
@@ -292,10 +282,13 @@ const Canvas = () => {
         ref={canvasRef}
         style={{
           position: 'fixed',
-          top: '50px',
+          top: window.innerWidth <= 480 ? '60px' : window.innerWidth <= 768 ? '70px' : '50px',
           left: 0,
           pointerEvents: 'none',
-          zIndex: 0
+          zIndex: 0,
+          width: '100%',
+          maxWidth: '100vw',
+          overflow: 'hidden'
         }}
       />
       <LightBulb />

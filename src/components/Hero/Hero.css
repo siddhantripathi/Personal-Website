@@ -9,18 +9,25 @@
 @media (max-width: 768px) {
   .hero {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   .hero-content {
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-content h1 {
     font-size: 2.5rem;
+    word-wrap: break-word;
   }
 
   .hero-content p {
     font-size: 1.1rem;
+    word-wrap: break-word;
   }
 }
 

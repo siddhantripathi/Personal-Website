@@ -116,18 +116,29 @@ body.light-mode .project-card {
 }
 
 @media (max-width: 768px) {
+  .projects {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 2rem 0;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
-    max-width: 500px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .project-card {
     margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 100%;
   }
   
   .projects h2 {
     font-size: 2rem;
+    padding: 0 1rem;
   }
 
   .project-content {
@@ -139,6 +150,10 @@ body.light-mode .project-card {
 
   .project-image img {
     height: 180px;
+  }
+  
+  .project-links {
+    flex-wrap: wrap;
   }
 }
 

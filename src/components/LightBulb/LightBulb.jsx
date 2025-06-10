@@ -25,9 +25,6 @@ const LightBulb = ({ toggleTheme }) => {
     const draw = (timestamp) => {
       ctx.clearRect(0, 0, cssSize, cssSize);
       
-      const centerX = cssSize / 2;
-      const centerY = cssSize / 2;
-
       // Rest of your draw code remains the same...
       // [Keep existing drawing logic here]
 

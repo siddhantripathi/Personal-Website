@@ -72,6 +72,36 @@ nav li:hover::after {
   gap: 2rem;
 }
 
+/* Desktop styles for navigation links */
+.nav-links a {
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  transform: scale(1.05);
+}
+
 /* Mobile menu */
 @media (max-width: 768px) {
   .nav-links {
@@ -103,11 +133,7 @@ nav li:hover::after {
   font-size: 28px;
   cursor: pointer;
   padding: 0.5rem;
-  position: absolute;
-  left: 4rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 1002;
 }
 
 .mobile-menu-button span {
@@ -118,20 +144,25 @@ nav li:hover::after {
 
 @media (max-width: 768px) {
   .header {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     position: fixed;
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
     z-index: 1001;
+    box-sizing: border-box;
   }
 
   .logo {
-    margin-left: 1rem;
+    font-size: 1.5rem;
+    margin: 0;
   }
 
   .mobile-menu-button {
     display: block;
-    left: 4rem;
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
   }
 
   .nav-links {
@@ -142,6 +173,7 @@ nav li:hover::after {
     right: 0;
     background: rgba(0, 0, 0, 0.95);
     padding: 1rem 0;
+    box-sizing: border-box;
   }
 
   .nav-links.mobile-open {
@@ -153,59 +185,43 @@ nav li:hover::after {
 
   .nav-links a {
     font-size: 1.1rem;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     width: 100%;
     text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
   }
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 0.75rem;
+  }
 
-.nav-links a:hover {
-  text-decoration: underline;
-  transform: scale(1.1);
-}
+  .logo {
+    font-size: 1.3rem;
+  }
 
-.mobile-menu-button {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-@media (max-width: 768px) {
   .mobile-menu-button {
-    display: block;
-    position: absolute;
-    left: 24rem;
-    right: 0rem;
-    top: 2rem;
-    z-index: 1000;
-  }
-
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 1rem 0;
+    font-size: 24px;
+    padding: 0.25rem;
   }
 
   .nav-links.mobile-open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    top: 50px;
   }
-} 
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+ 

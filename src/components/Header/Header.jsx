@@ -31,13 +31,13 @@ const Header = () => {
         <span style={{ fontSize: '28px' }}>☰</span>
       </button>
       <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-        <a onClick={() => scrollToSection('hero')}>Home</a>
-        <a onClick={() => scrollToSection('about')}>About</a>
-        <a onClick={() => scrollToSection('skills')}>Skills</a>
-        <a onClick={() => scrollToSection('projects')}>Projects</a>
-        <a onClick={() => scrollToSection('experience')}>Experience</a>
-        <a href="https://drive.google.com/file/d/1YjSL4mjxHj72nwA9hd3px_nBcTm0wpLb/view?usp=sharing" target=" blank">Resume(link)</a>
-        <a onClick={() => scrollToSection('contact')}>Contact</a>
+        <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>Home</a>
+        <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
+        <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>Skills</a>
+        <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>Projects</a>
+        <a href="#experience" onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }}>Experience</a>
+        <a href="https://drive.google.com/file/d/1VBSYrdVK7hQ89tykMrdIq0rMtcbO7N8r/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume(link)</a>
+        <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
       </nav>
     </header>
   );

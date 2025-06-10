@@ -6,6 +6,29 @@
   height: 100%;
   z-index: 0;
   background: #000000;
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile responsiveness for canvas */
+@media (max-width: 768px) {
+  .canvas-container {
+    top: 70px; /* Account for mobile header */
+    height: calc(100vh - 70px); /* Adjust height to prevent overflow */
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .canvas-container {
+    top: 60px; /* Account for smaller mobile header */
+    height: calc(100vh - 60px); /* Adjust height to prevent overflow */
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
 }
 
 .interactive-layer {
