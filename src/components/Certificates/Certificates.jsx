@@ -20,6 +20,14 @@ const Certificates = () => {
       credentialLink: "https://learn.microsoft.com/api/credentials/share/en-us/SiddhantTripathi-6599/977EDDB48383343C?sharingId=3C058C435F8E52E0",
       description: "Foundation level knowledge of cloud services and how those services are provided with Microsoft Azure."
     },
+    {
+      id: 3,
+      title: "Docker Mastery: with Kubernetes + Swarm",
+      issuer: "Udemy",
+      date: "June 2025",
+      credentialLink: "https://www.udemy.com/certificate/UC-a1b01888-d300-4b90-bf5f-b623fa36a426/",
+      description: "Successfully completed 'Docker Mastery: with Kubernetes +Swarm from a Docker Captain,' gaining comprehensive skills in containerization, orchestration with Docker Swarm and Kubernetes, CI/CD with GitHub Actions, and production-grade deployment strategies"
+    },
     // Add more certificates as needed
   ];
 
