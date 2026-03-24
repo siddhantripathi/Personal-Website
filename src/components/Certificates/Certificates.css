@@ -2,8 +2,10 @@
   padding: var(--spacing-xl) 0;
 }
 
-.certificates h2 {
+.certificates > .section-title {
+  display: block;
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 

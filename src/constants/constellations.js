@@ -434,6 +434,95 @@ export const CONSTELLATIONS = {
       [9, 12],
       [12, 13]
     ],
-  }
+  },
+
+  // --- newly added ---
+
+  lyra: {
+    name: "Lyra",
+    points: [
+      { x: 0.92, y: 0.07 },  // 0: Vega (α — one of the brightest stars in the sky)
+      { x: 0.910, y: 0.12 }, // 1: ζ (upper-left of parallelogram)
+      { x: 0.930, y: 0.12 }, // 2: ε (upper-right)
+      { x: 0.910, y: 0.17 }, // 3: δ (lower-left)
+      { x: 0.930, y: 0.17 }, // 4: β/γ (lower-right)
+    ],
+    connections: [
+      [0, 1], [0, 2],  // Vega down to parallelogram
+      [1, 2],          // top bar
+      [1, 3], [2, 4],  // sides
+      [3, 4],          // bottom bar
+    ],
+  },
+
+  perseus: {
+    name: "Perseus",
+    points: [
+      { x: 0.38, y: 0.09 },  // 0: Mirfak (α — brightest, center)
+      { x: 0.35, y: 0.07 },  // 1: δ (upper-left arm)
+      { x: 0.33, y: 0.05 },  // 2: γ (upper-left tip)
+      { x: 0.36, y: 0.12 },  // 3: ε (lower-left)
+      { x: 0.34, y: 0.14 },  // 4: Algol (β — famous variable/demon star)
+      { x: 0.41, y: 0.07 },  // 5: η (upper-right arm)
+      { x: 0.43, y: 0.05 },  // 6: τ (upper-right tip)
+      { x: 0.42, y: 0.12 },  // 7: ι (lower-right)
+    ],
+    connections: [
+      [0, 1], [1, 2],  // upper-left arm
+      [0, 3], [3, 4],  // lower arm down to Algol
+      [0, 5], [5, 6],  // upper-right arm
+      [0, 7],          // lower-right branch
+      [1, 3],          // inner connector for shape
+    ],
+  },
+
+  sagittarius: {
+    name: "Sagittarius",
+    points: [
+      { x: 0.20, y: 0.83 },  // 0: Alnasl (γ — spout tip)
+      { x: 0.22, y: 0.79 },  // 1: δ (spout upper)
+      { x: 0.24, y: 0.76 },  // 2: λ Kaus Borealis (lid top)
+      { x: 0.27, y: 0.75 },  // 3: φ (upper-right of body)
+      { x: 0.30, y: 0.77 },  // 4: σ Nunki (handle top)
+      { x: 0.31, y: 0.81 },  // 5: τ (handle middle)
+      { x: 0.29, y: 0.86 },  // 6: ζ (handle base)
+      { x: 0.25, y: 0.88 },  // 7: ε Kaus Australis (brightest, bottom-center)
+      { x: 0.20, y: 0.87 },  // 8: η (bottom-left)
+    ],
+    connections: [
+      [0, 1],   // spout
+      [1, 2],   // spout to lid
+      [2, 3],   // lid
+      [3, 4],   // lid to handle
+      [4, 5],   // handle upper
+      [5, 6],   // handle lower
+      [6, 7],   // handle base to bottom
+      [7, 8],   // bottom
+      [8, 0],   // close left side
+      [1, 8],   // base of spout to bottom-left
+      [2, 7],   // Kaus Borealis to Australis (arc)
+    ],
+  },
+
+  taurus: {
+    name: "Taurus",
+    points: [
+      { x: 0.09, y: 0.17 },  // 0: Aldebaran (α — bright eye, V-center)
+      { x: 0.06, y: 0.14 },  // 1: θ¹ (upper V arm)
+      { x: 0.04, y: 0.11 },  // 2: γ (upper V tip)
+      { x: 0.07, y: 0.20 },  // 3: δ¹ (lower V arm)
+      { x: 0.05, y: 0.23 },  // 4: ε (lower V tip)
+      { x: 0.12, y: 0.13 },  // 5: upper horn base
+      { x: 0.15, y: 0.09 },  // 6: Elnath (β — upper horn tip)
+      { x: 0.13, y: 0.19 },  // 7: λ (lower horn base)
+      { x: 0.16, y: 0.17 },  // 8: ζ (lower horn tip)
+    ],
+    connections: [
+      [0, 1], [1, 2],  // upper V arm
+      [0, 3], [3, 4],  // lower V arm
+      [0, 5], [5, 6],  // upper horn to Elnath
+      [5, 7], [7, 8],  // lower horn fork
+    ],
+  },
 };
 

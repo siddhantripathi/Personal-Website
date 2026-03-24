@@ -1,35 +1,61 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import './About.css';
 import profilePhoto from '../../images/self.jpg';
 
 const About = () => {
   return (
     <section id="about" className="about">
-      <div className="about-container">
+      <motion.div
+        className="about-container"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+      >
         <div className="about-content">
-          <h2>About Me</h2>
-          <p>
-          Hi, I’m Siddhant Tripathi—a passionate and detail-oriented software engineer with a robust background in full-stack development, mobile app innovation, cloud technologies, data analytics, and machine learning. Currently, I’m leveraging my expertise as a Software Engineer at Life Stages in the San Francisco Bay Area, where I lead the development of both iOS and Android mobile applications dedicated to enhancing mental well-being. 
-          
-          My work spans the entire development lifecycle—from ideation and cross-platform implementation (using frameworks like React Native and Flutter) to seamless deployment—ensuring that every feature directly contributes to a better user experience.
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            About Me
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+          >
+            I am a software engineer focused on machine learning and full-stack development. Currently, I work at the Data Institute for Societal Challenges (DISC) at the University of Oklahoma. My work involves building scalable systems and using data-driven solutions to address complex societal issues.
 
-          I earned my Master’s degree in Computer Science from Santa Clara University, December 2024, and hold a Bachelor’s in Computer Science from PES University, June 2022. 
-          
-          Over the years, I’ve built a diverse portfolio: from creating AI-driven recommendation systems for wellness apps and contributing to autonomous navigation projects at DRDO, to driving predictive analytics during my data analyst internship at Guavus and empowering future engineers as a guest lecturer at Daulat Ram College. 
-          
-          These experiences have shaped me into an adaptable, collaborative professional who thrives on tackling complex challenges with innovative, data-driven solutions.
+            I earned my Master's in Computer Science from Santa Clara University in December 2024. Before moving to Norman, I was a Software Engineer at Life Stages in the San Francisco Bay Area. In that role, I led the development of mobile applications for mental well-being using React Native and Flutter, overseeing the entire process from ideation to deployment.
 
-          In addition to my technical skills, I’m certified as an AWS Cloud Practitioner and Microsoft Azure Fundamentals professional, underscoring my proficiency in cloud infrastructure. 
+            Technical Background and Projects
+            Research and Analytics: I contributed to autonomous navigation projects at DRDO and drove predictive analytics during my time at Guavus.
 
-          When I’m not coding or architecting scalable systems, you can find me on the football field, in the gym, or immersed in video games under the gamer tag trippy_boi. Let’s connect and explore how we can push the boundaries of technology together!
-          </p>
+            Cloud Infrastructure: I am a certified AWS Cloud Practitioner and Microsoft Azure Fundamentals professional. Recently, I have been building and hosting LLM projects on Render.
+
+            Mentorship: I have shared my technical expertise as a guest lecturer at Daulat Ram College and hold a Bachelor's degree from PES University.
+
+            Personal Interests
+            When I am not at my desk, I stay active at the gym and on the football field. I am a long-time gamer on PC and Nintendo Switch, usually found under the tag trippy_boi1. I also enjoy staying current with system design and generative AI through audiobooks and technical newsletters.
+          </motion.p>
         </div>
-        <div className="profile-photo-container">
+
+        <motion.div
+          className="profile-photo-container"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
+        >
           <img src={profilePhoto} alt="Siddhant Tripathi" className="profile-photo" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
 
-export default About; 
+export default About;

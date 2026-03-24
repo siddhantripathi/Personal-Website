@@ -28,8 +28,12 @@ class WebSystem {
     
     // Place constellation stars with fixed values
     Object.entries(CONSTELLATIONS).forEach(([key, constellation]) => {
+      // Find centroid to keep constellation centered while correcting aspect ratio
+      const centroidX = constellation.points.reduce((sum, p) => sum + p.x, 0) / constellation.points.length;
+
       constellation.points.forEach((point, index) => {
-        const x = point.x * this.canvas.width;
+        // Scale x deviations from centroid by canvas.height (same as y) so shapes are proportional
+        const x = centroidX * this.canvas.width + (point.x - centroidX) * this.canvas.height;
         const y = point.y * this.canvas.height;
         this.stars.push({
           x: x,

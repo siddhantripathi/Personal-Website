@@ -7,11 +7,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 1001;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease,
+              backdrop-filter 0.4s ease, padding 0.3s ease;
+}
+
+/* Scrolled state — more opaque, stronger shadow */
+.header.scrolled {
+  background: rgba(10, 10, 18, 0.88);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  border-color: rgba(187, 134, 252, 0.15);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  padding: 0.65rem 2rem;
 }
 
 body::before {
@@ -30,59 +42,38 @@ body::before {
   display: none;
 }
 
+/* ── Logo ── */
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #bb86fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.2s ease;
 }
 
-nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.logo:hover {
+  opacity: 0.85;
 }
 
-nav li {
-  cursor: pointer;
-  position: relative;
-  padding: 0.5rem 0;
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
-nav li::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #ffffff;
-  transition: width 0.3s ease;
-}
-
-nav li:hover::after {
-  width: 100%;
-}
-
+/* ── Nav links ── */
 .nav-links {
   display: flex;
   gap: 2rem;
 }
 
-/* Desktop styles for navigation links */
 .nav-links a {
   cursor: pointer;
   position: relative;
   padding: 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #ffffff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, transform 0.2s ease;
 }
 
+/* animated underline */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -90,7 +81,8 @@ nav li:hover::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: #ffffff;
+  background: linear-gradient(90deg, #bb86fc, #7c4dff);
+  border-radius: 1px;
   transition: width 0.3s ease;
 }
 
@@ -99,32 +91,11 @@ nav li:hover::after {
 }
 
 .nav-links a:hover {
-  transform: scale(1.05);
+  color: #bb86fc;
+  transform: translateY(-1px);
 }
 
-/* Mobile menu */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
+/* ── Mobile menu button ── */
 .mobile-menu-button {
   display: none;
   background: none;
@@ -134,27 +105,36 @@ nav li:hover::after {
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1002;
+  transition: transform 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  transform: scale(1.1);
 }
 
 .mobile-menu-button span {
   display: block;
   color: white;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
   .header {
     padding: 0.75rem 1rem;
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.92);
     z-index: 1001;
     box-sizing: border-box;
   }
 
+  .header.scrolled {
+    padding: 0.6rem 1rem;
+    background: rgba(0, 0, 0, 0.97);
+  }
+
   .logo {
     font-size: 1.5rem;
-    margin: 0;
   }
 
   .mobile-menu-button {
@@ -171,9 +151,11 @@ nav li:hover::after {
     top: 60px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(10, 10, 18, 0.97);
+    backdrop-filter: blur(16px);
     padding: 1rem 0;
     box-sizing: border-box;
+    border-bottom: 1px solid rgba(187, 134, 252, 0.15);
   }
 
   .nav-links.mobile-open {
@@ -188,15 +170,11 @@ nav li:hover::after {
     padding: 0.75rem 0;
     width: 100%;
     text-align: center;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
   }
 
   .nav-links a:hover {
-    text-decoration: underline;
-    transform: scale(1.05);
+    transform: none;
+    color: #bb86fc;
   }
 }
 
@@ -223,5 +201,3 @@ nav li:hover::after {
     padding: 0.5rem 0;
   }
 }
-
- 

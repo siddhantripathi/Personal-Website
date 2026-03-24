@@ -4,7 +4,7 @@
   --background-color: #ffffff;
   --text-color: #333333;
   --accent-color: #17a2b8;
-  
+
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -13,4 +13,15 @@
 
   --border-radius: 8px;
   --transition-speed: 0.3s;
-} 
+
+  /* Animation / colour palette */
+  --purple:        #bb86fc;
+  --purple-dark:   #7c4dff;
+  --blue-accent:   #4a90e2;
+  --gradient-text: linear-gradient(135deg, #bb86fc 0%, #7c4dff 55%, #4a90e2 100%);
+  --gradient-bar:  linear-gradient(90deg, #bb86fc 0%, #7c4dff 100%);
+  --glow-purple:   0 0 28px rgba(187, 134, 252, 0.4);
+  --glass-bg:      rgba(255, 255, 255, 0.05);
+  --glass-border:  rgba(255, 255, 255, 0.12);
+  --glass-hover:   rgba(255, 255, 255, 0.10);
+}

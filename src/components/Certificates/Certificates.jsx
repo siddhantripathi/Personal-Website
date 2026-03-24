@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import './Certificates.css';
 
@@ -6,6 +5,22 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
+      title: "Building AI Agents and Agentic Workflows | Specialization ",
+      issuer: "IBM",
+      date: "January 2026",
+      credentialLink: "https://www.coursera.org/account/accomplishments/specialization/certificate/HXO71BDNLOE4",
+      //description: "Comprehensive understanding of AWS Cloud concepts, services, security, architecture, pricing, and support."
+    },
+    {
+      id: 2,
+      title: "Google AI Essentials | Specialization  ",
+      issuer: "Google",
+      date: "January 2026",
+      credentialLink: "https://www.coursera.org/account/accomplishments/specialization/00K0YP484RPS",
+      //description: "Comprehensive understanding of AWS Cloud concepts, services, security, architecture, pricing, and support."
+    },
+    {
+      id: 3,
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
       date: "September 2024",
@@ -13,7 +28,7 @@ const Certificates = () => {
       description: "Comprehensive understanding of AWS Cloud concepts, services, security, architecture, pricing, and support."
     },
     {
-      id: 2,
+      id: 4,
       title: "Microsoft Certified: Azure Fundamentals",
       issuer: "Microsoft",
       date: "January 2025",
@@ -21,7 +36,7 @@ const Certificates = () => {
       description: "Foundation level knowledge of cloud services and how those services are provided with Microsoft Azure."
     },
     {
-      id: 3,
+      id: 5,
       title: "Docker Mastery: with Kubernetes + Swarm",
       issuer: "Udemy",
       date: "June 2025",
@@ -34,20 +49,23 @@ const Certificates = () => {
   return (
     <section id="certificates" className="certificates">
       <motion.h2
+        className="section-title"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
         Certificates
       </motion.h2>
       <div className="timeline">
-        {certificates.map((cert) => (
+        {certificates.map((cert, index) => (
           <motion.div
             key={cert.id}
             className="timeline-item"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: index * 0.12, duration: 0.5, ease: 'easeOut' }}
           >
             <div className="timeline-content">
               <div className="timeline-date">{cert.date}</div>
