@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import ScrambleText from '../TextAnimations/ScrambleText';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import gmailColor    from './gmail.jpg';
@@ -39,15 +40,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        Contact Me
-      </motion.h2>
+      <ScrambleText text="Contact Me" tag="h2" className="section-title" />
 
       <motion.div
         className="contact-container"

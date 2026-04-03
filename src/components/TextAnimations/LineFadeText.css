@@ -1,0 +1,22 @@
+.line-fade-text {
+  width: 100%;
+}
+
+.lft-paragraph {
+  margin-bottom: 1rem;
+}
+
+.lft-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.lft-line {
+  display: block;
+  line-height: 1.75;
+}
+
+/* Fallback (before pretext computes lines) */
+.lft-fallback {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+}

@@ -1,0 +1,7 @@
+/* ScrambleText — layout stability shell.
+   All visual styling comes from the consumer's className (e.g. section-title).
+   The only job here is to keep the element from collapsing when min-width is set. */
+.scramble-text {
+  display: inline-block;
+  will-change: contents;
+}

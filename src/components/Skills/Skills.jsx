@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ScrambleText from '../TextAnimations/ScrambleText';
 import './Skills.css';
 
 const Skills = () => {
@@ -45,7 +46,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills" ref={sectionRef}>
-      <h2 className="section-title">Skills</h2>
+      <ScrambleText text="Skills" tag="h2" className="section-title" />
       <div className="skills-container">
         {displayedSkills.map((skill, index) => (
           <div

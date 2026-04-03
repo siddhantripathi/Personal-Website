@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import ScrambleText from '../TextAnimations/ScrambleText';
 import './Experience.css';
 import lifestages from '../../images/lifestages.jpg';
 import drdo from '../../images/DRDO.jpg';
@@ -107,15 +108,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="experience">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        Experience
-      </motion.h2>
+      <ScrambleText text="Experience" tag="h2" className="section-title" />
 
       <div className="experience-grid">
         {experiences.map((exp, index) => (

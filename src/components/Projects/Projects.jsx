@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import ScrambleText from '../TextAnimations/ScrambleText';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 import project1Image from './1.jpg.png';
@@ -110,15 +111,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <motion.h2
-        className="section-title"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        My Projects
-      </motion.h2>
+      <ScrambleText text="My Projects" tag="h2" className="section-title" />
       <motion.div 
         className="projects-grid"
         layout

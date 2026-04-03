@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ReactTyped } from 'react-typed';
+import WaveText from '../TextAnimations/WaveText';
 import './Hero.css';
 
 const Hero = () => {
@@ -17,7 +18,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Hi, I'm <span className="highlight">Siddhant Tripathi</span>
+          Hi, I'm <WaveText text="Siddhant Tripathi" />
         </motion.h1>
 
         <motion.h2
